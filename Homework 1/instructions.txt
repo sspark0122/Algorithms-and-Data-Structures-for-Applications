@@ -1,0 +1,30 @@
+THE PROBLEM:
+
+We want to implement Dijkstra's Algorithm as presented in lecture to find the shortest path in a graph.
+
+Before doing so, you'll first need to implement a directed graph in two different ways:
+ * An adjacency list, where a graph is represented as a map, where the keys are nodes in the graph and the values are a list of all the nodes adjacent to the key node.
+ * An edge list, where a graph is representated as a list of tuples, where each tuple represents an edge between two nodes.
+NOTE: that for both these graphs, implementations for both the constructor and a has_edge method are given. Please DO NOT edit those given implementations; they are there to help you understand the data structure we intend for you to implement.
+NOTE: The two graphs should be *directed* graphs, NOT undirected graphs.
+
+Next, you'll implement Dijkstra's Shortest-Path Algorthm, which should work regardless of which of the two types of graphs is given as input. The shortest_path function asks you to return a tuple that looks like ([`start_node`, ..., `target_node`], `length`) where the first part is the shortest path from the `source_node` to the `target_node` and the second part is the `length` of said path. However, you will implement this in two stages:
+ * First, implement shortest_path while only worrying about the length of the path. For this stage, just return something like ([], `length`) so that the output passes our automated tester's type checks but allows you to focus on making the `length` right.
+ * Second, augment your implementation to track the nodes in the shortest path so that you can output the path itself along with its length.
+Each element of the output will be graded separately, so giving an output of ([], `length`) on a given input will receive partial credit (assuming `length` is correct for the given input).
+NOTE: You can assume the input graph is connected, that all the graph's edges have positive edge weights, that the soure_node and target_node are both nodes in the graph, and that at least one path from the source_node to the target_node exists.
+
+LOGISTICS:
+
+NOTE: Please use Python 2 when completing this assignment (NOT Python 3).
+
+Please modify and submit the following files:
+ * "graph_adjacency_list.py"
+ * "graph_edge_list.py"
+ * "shortest_path.py"
+
+To ensure compatibility with our grading software, please ensure that the provided test files run. You should be able to run the following without errors:
+ * python graph_test.py
+ * python shortest_path_test.py
+
+NOTE: shortest_path_test relies on your graphs working, so ensure that graph_test passes before moving on to shortest_path_test.
